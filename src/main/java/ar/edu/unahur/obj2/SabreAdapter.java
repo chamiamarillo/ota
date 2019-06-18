@@ -10,6 +10,10 @@ public class SabreAdapter implements Proveedor {
 
     private Sabre sabre;
 
+    public SabreAdapter(Sabre sabre) {
+        this.sabre = sabre;
+    }
+
     @Override
     public List<Vuelo> buscarVuelos(DateTime fecha, String origen, String destino) {
         return sabre.buscar(fecha, origen, destino);

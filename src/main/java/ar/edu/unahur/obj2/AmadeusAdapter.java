@@ -8,8 +8,11 @@ import java.util.Set;
 
 public class AmadeusAdapter implements Proveedor {
 
-    private Amadeus amadeus;
+    protected Amadeus amadeus;
 
+    public AmadeusAdapter(Amadeus amadeus) {
+        this.amadeus = amadeus;
+    }
 
     @Override
     public List<Vuelo> buscarVuelos(DateTime fecha, String origen, String destino) {

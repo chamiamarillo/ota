@@ -10,6 +10,10 @@ public class WorldspanAdapter implements Proveedor {
 
     private Worldspan worldspan;
 
+    public WorldspanAdapter(Worldspan worldspan) {
+        this.worldspan = worldspan;
+    }
+
     @Override
     public List<Vuelo> buscarVuelos(DateTime fecha, String origen, String destino) {
         return worldspan.searchFlights(fecha.getDayOfMonth(), fecha.getMonthOfYear(), fecha.getYear(), origen, destino);

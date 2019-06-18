@@ -9,8 +9,8 @@ public class DistribuidorDeTrafico {
     private Random random = new Random();
     private List<Proveedor> proveedors; // atributo que va a recibir una lista
 
-    public DistribuidorDeTrafico(List<Proveedor> proveedors) {
-        this.proveedors = proveedors;
+    public DistribuidorDeTrafico(List<Proveedor> proveedor) {
+        this.proveedors = proveedor;
     }
 
     public void addProveedor(Proveedor proveedor) {
