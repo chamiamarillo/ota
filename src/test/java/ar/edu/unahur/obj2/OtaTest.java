@@ -4,6 +4,7 @@ import ar.edu.unahur.obj2.proveedores.Amadeus;
 import ar.edu.unahur.obj2.proveedores.Sabre;
 import ar.edu.unahur.obj2.proveedores.Worldspan;
 import org.joda.time.DateTime;
+import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 
 import java.util.ArrayList;
@@ -34,6 +35,13 @@ public class OtaTest {
 
 
         List<Vuelo> vuelos = ota.buscarVuelos(fecha, "BUE", "MIA");
+
+        // consulto en la api original para comparar que esta bien
+        List<Vuelo> vueloOriginal = amadeus.executeSearch(fecha,"BUE" , "MIA");
+
+        Assert.assertEquals(vuelos,vueloOriginal);
+
+
 
 
     }
