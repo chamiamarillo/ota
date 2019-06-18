@@ -8,5 +8,5 @@ import java.util.Set;
 public interface Proveedor {
 
     List<Vuelo> buscarVuelos(DateTime fecha, String origen, String destino);
-    public Boleto reservar(Vuelo vuelo, Set<Pasajero> pasajeros);
+    Boleto reservar(Vuelo vuelo, Set<Pasajero> pasajeros);
 }
