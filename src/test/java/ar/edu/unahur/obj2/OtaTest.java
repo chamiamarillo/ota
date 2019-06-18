@@ -27,7 +27,6 @@ public class OtaTest {
         List<Proveedor> proveedorList = Stream.of(amadeusAdapter).collect(Collectors.toList());
 
 
-
         DistribuidorDeTrafico distribuidorDeTrafico = new DistribuidorDeTrafico(proveedorList);
         Ota ota = new Ota(distribuidorDeTrafico);
 
@@ -45,21 +44,16 @@ public class OtaTest {
 
 
     }
-/*
+
     @org.testng.annotations.Test
     public void testReservar() {
+        Amadeus amadeus = new Amadeus();
+        AmadeusAdapter amadeusAdapter = new AmadeusAdapter(amadeus);
 
-        AmadeusAdapter amadeusAdapter = new AmadeusAdapter();
-        SabreAdapter sabreAdapter = new SabreAdapter();
-        WorldspanAdapter worldspanAdapter = new WorldspanAdapter();
-
-        List<Proveedor> proveedorList = Stream.of(amadeusAdapter, sabreAdapter,worldspanAdapter).collect(Collectors.toList());
+        List<Proveedor> proveedorList = Stream.of(amadeusAdapter).collect(Collectors.toList());
 
 
-
-
-
-        DistribuidorDeTrafico distribuidorDeTrafico = new DistribuidorDeTrafico();
+        DistribuidorDeTrafico distribuidorDeTrafico = new DistribuidorDeTrafico(proveedorList);
         Ota ota = new Ota(distribuidorDeTrafico);
 
         DateTime fecha = new DateTime("2019-12-13");
@@ -76,5 +70,4 @@ public class OtaTest {
 
 
     }
-*/
 }
